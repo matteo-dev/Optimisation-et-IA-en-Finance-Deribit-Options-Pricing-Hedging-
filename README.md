@@ -23,17 +23,44 @@ Plateforme quantitative complète développée en Python et Streamlit pour l'ana
    - Optimisation d'un portefeuille de couverture auto-finançant **Delta-Gamma-Vega neutre** via l'optimiseur `scipy.optimize`.
    - Réalisation de *Stress Tests* pour évaluer la résistance du portefeuille face à des chocs de marché.
 
+## English Below
+
+# 📈 Deribit Options Pricing, SSVI Calibration & Dynamic Hedging
+
+Comprehensive quantitative platform developed in Python and Streamlit for the analysis, pricing, and dynamic hedging of cryptocurrency derivatives (BTC/ETH) using real-time data from the Deribit exchange.
+
+## 🚀 Key Features by Module
+
+1. **Module 1: Data Pipeline**
+   - Connection to the Deribit public API for extracting instruments and order book data.
+   - Data cleaning, mid-price calculation, liquidity filtering (max spread 25%), and moneyness filtering.
+   - Statistical arbitrage testing comparing premiums to intrinsic values.
+
+2. **Module 2: Yield Curve (Nelson-Siegel)**
+   - Extraction of implied risk-free interest rates via Call-Put parity.
+   - Smoothing and extrapolation of the term structure of interest rates using the Nelson-Siegel parametric model.
+
+3. **Module 3: Volatility Surface (SSVI)**
+   - Implied volatility calculation via Newton-Raphson and bisection methods, along with Greeks extraction.
+   - Two-step calibration of the SSVI model (Gatheral & Jacquier) to model the volatility smile without arbitrage opportunities.
+   - Interactive 3D visualization of the SSVI surface.
+
+4. **Module 4: Structuring & Hedging**
+   - Creation of complex off-grid option strategies (Call Spread, Put Spread, Straddle, Strangle) and calculation of their payoff profiles.
+   - Optimization of a self-financing **Delta-Gamma-Vega neutral** hedging portfolio via `scipy.optimize`.
+   - Execution of Stress Tests to evaluate portfolio resilience against market shocks.
+   - 
 ---
 
 ## 🛠️ Installation et Utilisation
 
-1. **Cloner le dépôt :**
+1. **Cloner le dépôt / Clone the reposit :**
    ```bash
    git clone [https://github.com/votre-nom-d-utilisateur/deribit-options-optimization-ai.git](https://github.com/votre-nom-d-utilisateur/deribit-options-optimization-ai.git)
    cd deribit-options-optimization-ai
-2. **Installer les dépendances :**
+2. **Installer les dépendances / Install requirements :**
    ```bash
    pip install -r requirements.txt
-3. **Lancer le frontend :**
+3. **Lancer le frontend / Run frontend :**
    ```bash
    streamlit run dashboard.py
