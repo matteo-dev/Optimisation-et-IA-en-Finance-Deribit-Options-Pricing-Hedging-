@@ -25,8 +25,6 @@ Plateforme quantitative complète développée en Python et Streamlit pour l'ana
 
 ## English Below
 
-# 📈 Deribit Options Pricing, SSVI Calibration & Dynamic Hedging
-
 Comprehensive quantitative platform developed in Python and Streamlit for the analysis, pricing, and dynamic hedging of cryptocurrency derivatives (BTC/ETH) using real-time data from the Deribit exchange.
 
 ## 🚀 Key Features by Module
